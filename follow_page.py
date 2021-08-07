@@ -21,9 +21,11 @@ def show_follow_page():
     login_button=st.button("Login")
 
     if login_button:
-        bot.login(username=user, password=psw)
-        st.write("Login effettuato!")
-        
+        try:
+            bot.login(username=user, password=psw)
+            st.write("Login effettuato!")
+        except:
+            st.write("Problema nel login")
 
         #competior=str(input("Scrivi il nome del competior a cui vuoi copiare i followers: "))
         #numero=int(input("quanti ne vuoi seguire? "))
