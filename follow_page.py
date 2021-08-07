@@ -43,7 +43,7 @@ def show_follow_page():
             count_seguiti+=1
             print("ho seguito l'account: " + bot.get_user_info(i)["username"])
             print("Account seguiti: " + str(count_seguiti)) 
-
+            bot.logout()
 
 """ following=bot.get_user_following("username")
     print("Ho preso i following", following)
@@ -59,4 +59,4 @@ def show_follow_page():
             print("ho smesso di seguire l'account: " + bot.get_user_info(j)["username"]) """
 
 
-    #bot.logout()
+    
